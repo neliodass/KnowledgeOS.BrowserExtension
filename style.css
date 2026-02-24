@@ -2,3 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --tech-bg: #050505;
+    --tech-surface: #111111;
+    --tech-surface-hover: #1a1a1a;
+    --tech-primary: #a3ffbf;
+    --tech-primary-dim: rgba(163, 255, 191, 0.1);
+    --tech-border: #333333;
+    --tech-muted: #666666;
+    --tech-text-muted: #555555;
+}
+
+body {
+    background-color: var(--tech-bg);
+    color: white;
+    width: 320px;
+    margin: 0;
+}
