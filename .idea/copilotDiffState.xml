@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/postcss.config.js">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/postcss.config.js" />
+              <option name="originalContent" value="&#10;" />
+              <option name="updatedContent" value="module.exports = {&#10;  plugins: {&#10;    tailwindcss: {},&#10;    autoprefixer: {}&#10;  }&#10;}&#10;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/style.css">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/style.css" />
+              <option name="originalContent" value="&#10;" />
+              <option name="updatedContent" value="@tailwind base;&#10;@tailwind components;&#10;@tailwind utilities;&#10;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/tailwind.config.js">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/tailwind.config.js" />
+              <option name="originalContent" value="/** @type {import('tailwindcss').Config} */&#10;export default {&#10;  content: [],&#10;  theme: {&#10;    extend: {},&#10;  },&#10;  plugins: [],&#10;}&#10;&#10;" />
+              <option name="updatedContent" value="/** @type {import('tailwindcss').Config} */&#10;module.exports = {&#10;  content: [&quot;./**/*.{tsx,ts}&quot;],&#10;  theme: {&#10;    extend: {},&#10;  },&#10;  plugins: [],&#10;}&#10;&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
