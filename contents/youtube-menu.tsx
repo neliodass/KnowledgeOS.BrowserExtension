@@ -1,4 +1,7 @@
+import { FilePlus } from "lucide-react"
 import type { PlasmoCSConfig } from "plasmo"
+import { createElement } from "react"
+import { renderToStaticMarkup } from "react-dom/server"
 import { useEffect } from "react"
 import { apiFetch } from "~lib/api"
 
@@ -53,12 +56,7 @@ export default function YouTubeKnowledgeOS() {
             <div class="yt-list-item-view-model__label yt-list-item-view-model__container yt-list-item-view-model__container--compact yt-list-item-view-model__container--tappable yt-list-item-view-model__container--in-popup" style="cursor: pointer;">
               <div aria-hidden="true" class="yt-list-item-view-model__image-container yt-list-item-view-model__leading">
                 <span class="ytIconWrapperHost yt-list-item-view-model__accessory yt-list-item-view-model__image" style="display:flex; align-items:center; justify-content:center;">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" fill="none" stroke="#a3ffbf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"/>
-                    <polyline points="14 2 14 8 20 8"/>
-                    <path d="M3 15h6"/>
-                    <path d="M6 12v6"/>
-                  </svg>
+                  ${renderToStaticMarkup(createElement(FilePlus, { size: 24, stroke: "#a3ffbf", strokeWidth: 2 }))}
                 </span>
               </div>
               <button class="ytButtonOrAnchorHost ytButtonOrAnchorButton yt-list-item-view-model__button-or-anchor" style="pointer-events: none; padding: 0;">
