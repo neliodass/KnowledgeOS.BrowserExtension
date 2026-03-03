@@ -40,7 +40,7 @@ Pre-built extension packages are available in the [**Releases**](../../releases)
 
 ### Loading the Chrome extension manually
 
-1. Download the latest `chrome-mv3-prod.zip` from [Releases](../../releases) and unzip it
+1. Download the latest `knowledgeosextension-v0.0.x-chrome.zip` from [Releases](../../releases) and unzip it
 2. Open `chrome://extensions/`
 3. Enable **Developer mode** (top-right toggle)
 4. Click **Load unpacked** and select the unzipped folder
