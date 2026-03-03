@@ -1,7 +1,7 @@
 {
   "name": "knowledgeos-browser-extension",
   "displayName": "Knowledgeos browser extension",
-  "version": "0.0.1",
+  "version": "0.0.14",
   "description": "Add your links to KnowledgeOS effortlessly",
   "author": "pierogbartoszzstti@gmail.com",
   "scripts": {

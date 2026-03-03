@@ -3,7 +3,7 @@ import type { PlasmoCSConfig } from "plasmo"
 import { createElement } from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 import { useEffect } from "react"
-import { apiFetch } from "~lib/api"
+import { apiFetchViaBackground } from "~lib/api"
 
 export const config: PlasmoCSConfig = {
   matches: ["https://www.youtube.com/*"]
@@ -79,7 +79,7 @@ export default function YouTubeKnowledgeOS() {
             span.innerText = "Saving..."
 
             try {
-              await apiFetch("/api/Resources", {
+              await apiFetchViaBackground("/api/Resources", {
                 method: "POST",
                 body: { url: activeVideoUrl, addToVault: false }
               })

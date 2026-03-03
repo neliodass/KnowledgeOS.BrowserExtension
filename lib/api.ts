@@ -7,6 +7,27 @@ interface ApiRequestOptions {
   body?: any
 }
 
+export async function apiFetchViaBackground<T>(
+  endpoint: string,
+  options: ApiRequestOptions = {}
+): Promise<T> {
+  let response: any
+  try {
+    response = await (chrome.runtime.sendMessage as any)({ type: "KOS_API_REQUEST", endpoint, options })
+  } catch (err: any) {
+    const msg: string = err?.message ?? String(err)
+    if (msg.includes("context invalidated") || msg.includes("Extension context")) {
+      throw new Error("Failed.")
+    }
+    throw err
+  }
+
+  if (response?.success) {
+    return response.data as T
+  }
+  throw new Error(response?.error ?? "Unknown error")
+}
+
 export async function apiFetch<T>(endpoint: string, options: ApiRequestOptions = {}): Promise<T> {
   const apiUrl = await storage.get<string>("api_url")
   const token = await storage.get<string>("jwt_token")
